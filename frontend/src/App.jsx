@@ -57,7 +57,7 @@ export default function App() {
 
   const fetchProfile = async () => {
     try {
-      const res = await fetch('/api/auth/me', {
+      const res = await fetch('https://hal-kdms-backend.onrender.com/api/auth/me', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -117,7 +117,7 @@ export default function App() {
 function AppLayout() {
   const { logout, user } = useContext(AuthContext);
   const { darkMode } = useContext(ThemeContext);
-  
+
   // Sandbox pending accounts until password is set
   if (user?.status === 'pending_activation') {
     return (
@@ -136,7 +136,7 @@ function AppLayout() {
       {/* Main Panel Content */}
       <div className="flex flex-col flex-1 h-full overflow-hidden">
         <Navbar />
-        
+
         <main className="flex-1 overflow-y-auto px-6 py-6 md:px-8 grid-aerospace">
           <Routes>
             <Route path="/dashboard" element={<Dashboard />} />
@@ -147,7 +147,7 @@ function AppLayout() {
             <Route path="/ai" element={<AIAssistant />} />
             <Route path="/knowledge" element={<KnowledgeRepository />} />
             <Route path="/analytics" element={<Analytics />} />
-            
+
             {/* Admin Exclusive routes */}
             <Route path="/employees" element={
               user?.role === 'Administrator' ? <EmployeeManagement /> : <Navigate to="/dashboard" replace />
