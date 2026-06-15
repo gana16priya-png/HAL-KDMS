@@ -1,0 +1,500 @@
+{
+  "users": [
+    {
+      "id": "jey08squx",
+      "_id": "cxbp2r0dr",
+      "createdAt": "2026-06-15T14:16:28.235Z",
+      "updatedAt": "2026-06-15T14:16:28.235Z",
+      "name": "Administrator",
+      "email": "admin@halbrain.com",
+      "password": "$2a$10$8lQjI9tGE4PjmdGV8PScHu4/HbNygjiqxXBJboMmLNux3HQOeEZ62",
+      "role": "Administrator",
+      "department": "Information Technology",
+      "employeeId": "admin",
+      "status": "active",
+      "designation": "Chief Information Officer",
+      "plainPassword": "admin123"
+    },
+    {
+      "id": "x22hvjohl",
+      "_id": "8vx42n6nn",
+      "createdAt": "2026-06-15T14:16:28.341Z",
+      "updatedAt": "2026-06-15T14:16:28.341Z",
+      "name": "Dr. Vivek Murthy (PM-Avionics)",
+      "email": "pm@hal-india.co.in",
+      "password": "$2a$10$xKgGl.z0AKTYvTPoQ4JX5.BFt6/U/bqVI2v0cY0ufqyOvMHF3BrxW",
+      "role": "Project Manager",
+      "department": "Avionics Division",
+      "employeeId": "HAL-2026-0002",
+      "status": "active",
+      "designation": "Project Director",
+      "plainPassword": "pm123"
+    },
+    {
+      "id": "im9e024dr",
+      "_id": "bqzlomuo7",
+      "createdAt": "2026-06-15T14:16:28.446Z",
+      "updatedAt": "2026-06-15T14:16:28.446Z",
+      "name": "Sanjay Rawat (Lead Aerodynamics)",
+      "email": "engineer@hal-india.co.in",
+      "password": "$2a$10$LqbBu4vwWkscYuHUKyyryexBbsWW9lNt60wt3UseKIWs.r1.qjzla",
+      "role": "Engineer",
+      "department": "Design Division",
+      "employeeId": "HAL-2026-0003",
+      "status": "active",
+      "designation": "Lead Aerodynamics Engineer",
+      "plainPassword": "eng123"
+    },
+    {
+      "id": "3rycc8ezn",
+      "_id": "e70w04zsz",
+      "createdAt": "2026-06-15T14:16:28.549Z",
+      "updatedAt": "2026-06-15T14:16:28.549Z",
+      "name": "Kiran Bedi (Propulsion Systems)",
+      "email": "employee@hal-india.co.in",
+      "password": "$2a$10$45NM5ekwap2kMnRWr1ZkiO0nHFVhk6KVsCpfwjWz74flgnXNuANnG",
+      "role": "Employee",
+      "department": "Engine Division",
+      "employeeId": "HAL-2026-0004",
+      "status": "active",
+      "designation": "Propulsion Specialist",
+      "plainPassword": "emp123"
+    },
+    {
+      "id": "ho3bsaycu",
+      "_id": "5y9z04m4k",
+      "createdAt": "2026-06-15T14:16:28.655Z",
+      "updatedAt": "2026-06-15T14:16:28.655Z",
+      "name": "Sub. Lt. Neha Sharma (Avionics)",
+      "email": "tempuser@hal-india.co.in",
+      "password": "$2a$10$Nfv6WTnAu8YBgq69uCvlWuC5v1hd2D9N6DccymxuuQuFiSI.m5q26",
+      "role": "Employee",
+      "department": "Avionics Division",
+      "employeeId": "HAL-2026-9090",
+      "status": "pending_activation",
+      "designation": "Junior Engineer",
+      "plainPassword": "TEMP-5678"
+    }
+  ],
+  "projects": [
+    {
+      "id": "xpfi6vrzb",
+      "_id": "i6wr5iuoy",
+      "createdAt": "2026-06-15T14:16:28.656Z",
+      "updatedAt": "2026-06-15T14:16:28.656Z",
+      "name": "LCA Tejas Mk2 Design & Development",
+      "department": "Design Division",
+      "startDate": "2025-01-15",
+      "endDate": "2028-12-30",
+      "projectManager": "Dr. Vivek Murthy",
+      "status": "Active",
+      "progressPercentage": 45,
+      "milestones": [
+        {
+          "name": "Wind Tunnel Calibration Testing",
+          "date": "2025-06-10",
+          "completed": true
+        },
+        {
+          "name": "Avionics Prototype Mock Integration",
+          "date": "2026-02-15",
+          "completed": true
+        },
+        {
+          "name": "Fuselage Structural Assembly Verification",
+          "date": "2026-10-01",
+          "completed": false
+        },
+        {
+          "name": "First Technical Maiden Flight Rollout",
+          "date": "2027-05-18",
+          "completed": false
+        }
+      ],
+      "risks": [
+        {
+          "title": "Delays in Wing Composite Deliveries",
+          "severity": "High",
+          "description": "Supply chain friction for carbon fiber fabrics.",
+          "status": "Identified"
+        },
+        {
+          "title": "Radar Telemetry Calibration Shifts",
+          "severity": "Medium",
+          "description": "Small telemetry offset in thermal environments.",
+          "status": "Mitigated"
+        }
+      ]
+    },
+    {
+      "id": "xrhosiktt",
+      "_id": "rx9qkadji",
+      "createdAt": "2026-06-15T14:16:28.657Z",
+      "updatedAt": "2026-06-15T14:16:28.657Z",
+      "name": "Su-30 MKI Flight Computer Upgrade",
+      "department": "Avionics Division",
+      "startDate": "2024-03-01",
+      "endDate": "2026-09-15",
+      "projectManager": "Dr. Vivek Murthy",
+      "status": "Delayed",
+      "progressPercentage": 80,
+      "milestones": [
+        {
+          "name": "Hardware interface card layout setup",
+          "date": "2024-08-01",
+          "completed": true
+        },
+        {
+          "name": "Real-time OS boot testing",
+          "date": "2025-02-28",
+          "completed": true
+        },
+        {
+          "name": "Cockpit telemetry display updates",
+          "date": "2025-11-10",
+          "completed": true
+        },
+        {
+          "name": "Joint Air Force trial approval sign-off",
+          "date": "2026-04-10",
+          "completed": false
+        }
+      ],
+      "risks": [
+        {
+          "title": "FPGA Chip Allocation Shortage",
+          "severity": "High",
+          "description": "Global fab allocation queues backlog.",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "id": "0y5r70vt5",
+      "_id": "17m4ea6px",
+      "createdAt": "2026-06-15T14:16:28.658Z",
+      "updatedAt": "2026-06-15T14:16:28.658Z",
+      "name": "AMCA Fifth-Gen Stealth Fighter R&D",
+      "department": "Research & Development",
+      "startDate": "2026-01-01",
+      "endDate": "2032-12-31",
+      "projectManager": "Air Commodore Rajesh Sen",
+      "status": "Active",
+      "progressPercentage": 12,
+      "milestones": [
+        {
+          "name": "RCS signature numerical modeling",
+          "date": "2026-05-01",
+          "completed": true
+        },
+        {
+          "name": "Internal weapons bay release model",
+          "date": "2026-11-20",
+          "completed": false
+        }
+      ],
+      "risks": [
+        {
+          "title": "RAM Paint Coating Longevity",
+          "severity": "High",
+          "description": "Radar absorbent paint peeling at high temperatures.",
+          "status": "Identified"
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    {
+      "id": "qer36ml96",
+      "_id": "y8kuqv7m7",
+      "createdAt": "2026-06-15T14:16:28.659Z",
+      "updatedAt": "2026-06-15T14:16:28.659Z",
+      "title": "Replacement of Primary Fly-by-Wire Supplier",
+      "projectName": "LCA Tejas Mk2 Design & Development",
+      "department": "Avionics Division",
+      "description": "Terminate supplier contract with AeroSystems-A and award integration contract to Electronics-B for the digital cockpit computers.",
+      "reasoning": "AeroSystems-A failed to meet MIL-STD-178C certification safety timelines for code coverage. Over 18 months of schedule slippage occurred. Electronics-B had already certified templates ready.",
+      "benefits": "Recovers 6 months of prototype latency. Ensures fully compliant safety compliance certificates.",
+      "risks": "Electronics-B requires hardware connector modifications, incurring a design revision cost of 2.4 Million INR.",
+      "supportingDocuments": [
+        "AeroSystems_Timeline_Audit.pdf",
+        "ElectronicsB_Proposal_V3.pdf"
+      ],
+      "approvalStatus": "Approved",
+      "createdBy": "Dr. Vivek Murthy (PM-Avionics)",
+      "date": "2026-04-12"
+    },
+    {
+      "id": "8qe7d8gaf",
+      "_id": "v19yuegrf",
+      "createdAt": "2026-06-15T14:16:28.662Z",
+      "updatedAt": "2026-06-15T14:16:28.662Z",
+      "title": "Adoption of Titanium Grade-5 for Nozzle Mount Assembly",
+      "projectName": "Su-30 MKI Flight Computer Upgrade",
+      "department": "Design Division",
+      "description": "Switch mount components design standard from Aluminum 7075 alloy to Titanium Ti-6Al-4V (Grade-5).",
+      "reasoning": "Thermal thermography scans on operational Sukhoi airframes demonstrated structural micro-cracks under load cycles exceeding 350 degrees C. Aluminum alloys lose load-carrying capacity at this range.",
+      "benefits": "Triples nozzle mounting assembly life expectancy. Completely eliminates heat stress crack fatigue.",
+      "risks": "Increases dry mass of the component by 14.5 kg. Requires precision electric-discharge machining (EDM) which increases machine shop hours.",
+      "supportingDocuments": [
+        "Thermal_Stress_Report_Su30.pdf"
+      ],
+      "approvalStatus": "Approved",
+      "createdBy": "Sanjay Rawat (Lead Aerodynamics)",
+      "date": "2026-05-18"
+    },
+    {
+      "id": "51b4xe3tk",
+      "_id": "fgbr0klat",
+      "createdAt": "2026-06-15T14:16:28.664Z",
+      "updatedAt": "2026-06-15T14:16:28.664Z",
+      "title": "Divergent Nozzle Intake Grid Redesign",
+      "projectName": "AMCA Fifth-Gen Stealth Fighter R&D",
+      "department": "Research & Development",
+      "description": "Re-angle stealth intake grid boundary layer diverters by negative 4.5 degrees.",
+      "reasoning": "Initial computational fluid dynamics (CFD) mock tests indicated supersonic engine stalls at High Alpha angles of attack.",
+      "benefits": "Maintains air flow stability. Decreases radar cross-section (RCS) signature return.",
+      "risks": "Restricts maximum thrust performance by 1.2% in reheat mode.",
+      "supportingDocuments": [
+        "AMCA_CFD_BoundaryLayer_Data.pdf"
+      ],
+      "approvalStatus": "Pending",
+      "createdBy": "Sanjay Rawat (Lead Aerodynamics)",
+      "date": "2026-06-02"
+    }
+  ],
+  "issues": [
+    {
+      "id": "slia5twni",
+      "_id": "vc0c57521",
+      "createdAt": "2026-06-15T14:16:28.665Z",
+      "updatedAt": "2026-06-15T14:16:28.665Z",
+      "title": "Landing Gear Deployment Valve Pressure Drops",
+      "description": "Telemetry alerts showing sudden 15% pressure drop in hydraulic loop line B-4 during continuous cycles test on test jig 8.",
+      "department": "Design Division",
+      "priority": "Critical",
+      "severity": "Critical",
+      "status": "In Progress",
+      "assignedTo": "Sanjay Rawat (Lead Aerodynamics)",
+      "reportedBy": "Kiran Bedi (Propulsion Systems)",
+      "rootCause": "Elastomer seal erosion due to particulate contamination in the test rig fluid loop.",
+      "resolution": "Flush fluid lines, install 3-micron absolute filters, and replace rubber seals with synthetic fluoropolymer seals.",
+      "attachments": [
+        "Pressure_Log_Test8.xlsx"
+      ],
+      "slaAlertsSent": false
+    },
+    {
+      "id": "w0ll0whl7",
+      "_id": "fm63edukh",
+      "createdAt": "2026-06-15T14:16:28.666Z",
+      "updatedAt": "2026-06-15T14:16:28.666Z",
+      "title": "Radar Target Tracking Drift in Thermographic Flights",
+      "description": "Target tracking accuracy displays an azimuthal drift of 0.4 degrees when the radar nose cone structure heats above 75 degrees C.",
+      "department": "Avionics Division",
+      "priority": "High",
+      "severity": "Major",
+      "status": "Resolved",
+      "assignedTo": "Dr. Vivek Murthy (PM-Avionics)",
+      "reportedBy": "Sanjay Rawat (Lead Aerodynamics)",
+      "rootCause": "Thermal expand coefficient mismatch on target board mount standoffs.",
+      "resolution": "Replaced support standoffs with Invar-36 alloy brackets which have near-zero thermal expansion characteristics.",
+      "attachments": [
+        "Azimuth_Drift_Graph.pdf"
+      ],
+      "slaAlertsSent": false
+    },
+    {
+      "id": "83jvepqhr",
+      "_id": "sz95culs7",
+      "createdAt": "2026-06-15T14:16:28.667Z",
+      "updatedAt": "2026-06-15T14:16:28.667Z",
+      "title": "Engine Afterburner Fuel Spurt Flutter",
+      "description": "Unstable pressure pulsations observed during ground trials of HTT-40 engine block when throttling between military and reheat levels.",
+      "department": "Engine Division",
+      "priority": "Critical",
+      "severity": "Blocker",
+      "status": "Reported",
+      "assignedTo": "Kiran Bedi (Propulsion Systems)",
+      "reportedBy": "Sanjay Rawat (Lead Aerodynamics)",
+      "rootCause": "",
+      "resolution": "",
+      "attachments": [],
+      "slaAlertsSent": false
+    }
+  ],
+  "documents": [
+    {
+      "id": "hd1atp38y",
+      "_id": "cphvgnvm5",
+      "createdAt": "2026-06-15T14:16:28.671Z",
+      "updatedAt": "2026-06-15T14:16:28.671Z",
+      "name": "AeroSystems_Timeline_Audit.pdf",
+      "path": "AeroSystems_Timeline_Audit.pdf",
+      "extension": "PDF",
+      "uploader": "Dr. Vivek Murthy (PM-Avionics)",
+      "tags": [
+        "Supplier",
+        "Audit",
+        "LCA"
+      ],
+      "size": 1024,
+      "version": "1.0.0",
+      "history": [
+        {
+          "version": "1.0.0",
+          "path": "AeroSystems_Timeline_Audit.pdf",
+          "date": "2026-06-15T14:16:28.671Z",
+          "uploader": "Dr. Vivek Murthy (PM-Avionics)"
+        }
+      ]
+    },
+    {
+      "id": "9nruxhrtl",
+      "_id": "bri7kno3q",
+      "createdAt": "2026-06-15T14:16:28.673Z",
+      "updatedAt": "2026-06-15T14:16:28.673Z",
+      "name": "ElectronicsB_Proposal_V3.pdf",
+      "path": "ElectronicsB_Proposal_V3.pdf",
+      "extension": "PDF",
+      "uploader": "Dr. Vivek Murthy (PM-Avionics)",
+      "tags": [
+        "Proposal",
+        "Contract",
+        "Cockpit"
+      ],
+      "size": 1024,
+      "version": "1.0.0",
+      "history": [
+        {
+          "version": "1.0.0",
+          "path": "ElectronicsB_Proposal_V3.pdf",
+          "date": "2026-06-15T14:16:28.672Z",
+          "uploader": "Dr. Vivek Murthy (PM-Avionics)"
+        }
+      ]
+    },
+    {
+      "id": "cjk2iyuyr",
+      "_id": "5yljif75e",
+      "createdAt": "2026-06-15T14:16:28.674Z",
+      "updatedAt": "2026-06-15T14:16:28.674Z",
+      "name": "Thermal_Stress_Report_Su30.pdf",
+      "path": "Thermal_Stress_Report_Su30.pdf",
+      "extension": "PDF",
+      "uploader": "Dr. Vivek Murthy (PM-Avionics)",
+      "tags": [
+        "Stress Analysis",
+        "Thermal",
+        "Sukhoi"
+      ],
+      "size": 1024,
+      "version": "1.0.0",
+      "history": [
+        {
+          "version": "1.0.0",
+          "path": "Thermal_Stress_Report_Su30.pdf",
+          "date": "2026-06-15T14:16:28.674Z",
+          "uploader": "Dr. Vivek Murthy (PM-Avionics)"
+        }
+      ]
+    },
+    {
+      "id": "9l8kxn7tz",
+      "_id": "i785zcuq7",
+      "createdAt": "2026-06-15T14:16:28.676Z",
+      "updatedAt": "2026-06-15T14:16:28.676Z",
+      "name": "Azimuth_Drift_Graph.pdf",
+      "path": "Azimuth_Drift_Graph.pdf",
+      "extension": "PDF",
+      "uploader": "Dr. Vivek Murthy (PM-Avionics)",
+      "tags": [
+        "Radar",
+        "Testing",
+        "Avionics"
+      ],
+      "size": 1024,
+      "version": "1.0.0",
+      "history": [
+        {
+          "version": "1.0.0",
+          "path": "Azimuth_Drift_Graph.pdf",
+          "date": "2026-06-15T14:16:28.676Z",
+          "uploader": "Dr. Vivek Murthy (PM-Avionics)"
+        }
+      ]
+    }
+  ],
+  "auditlogs": [
+    {
+      "id": "0ue22eazd",
+      "_id": "iv93vvbiz",
+      "createdAt": "2026-06-15T14:16:28.680Z",
+      "updatedAt": "2026-06-15T14:16:28.680Z",
+      "userId": "System",
+      "userName": "HAL's BRAIN Seeder",
+      "action": "Database Hydration",
+      "details": "Successfully populated HAL's BRAIN workspace users, divisions, projects, access request logs, and issue tickets.",
+      "ipAddress": "127.0.0.1"
+    },
+    {
+      "id": "xg7ogkqso",
+      "_id": "tkoxp8y0b",
+      "createdAt": "2026-06-15T14:17:27.017Z",
+      "updatedAt": "2026-06-15T14:17:27.017Z",
+      "userId": "jey08squx",
+      "userName": "Administrator",
+      "action": "AI Assist Query",
+      "details": "Asked: \"Why was AeroSystems FBW supplier replaced?...\" [Mode: Beginner]",
+      "ipAddress": "::1"
+    },
+    {
+      "id": "nbmvuxu49",
+      "_id": "kzvo4ya5z",
+      "createdAt": "2026-06-15T14:29:52.769Z",
+      "updatedAt": "2026-06-15T14:29:52.769Z",
+      "userId": "x22hvjohl",
+      "userName": "Dr. Vivek Murthy (PM-Avionics)",
+      "action": "AI Assist Query",
+      "details": "Asked: \"What was the reason for adopting Titanium on Su-30...\" [Mode: Professional]",
+      "ipAddress": "::1"
+    },
+    {
+      "id": "8n36vywp2",
+      "_id": "k1ltpj72i",
+      "createdAt": "2026-06-15T14:30:07.898Z",
+      "updatedAt": "2026-06-15T14:30:07.898Z",
+      "userId": "x22hvjohl",
+      "userName": "Dr. Vivek Murthy (PM-Avionics)",
+      "action": "AI Assist Query",
+      "details": "Asked: \"in simple...\" [Mode: Professional]",
+      "ipAddress": "::1"
+    }
+  ],
+  "accessrequests": [
+    {
+      "id": "95a5gllxg",
+      "_id": "kyhapvr0v",
+      "createdAt": "2026-06-15T14:16:28.668Z",
+      "updatedAt": "2026-06-15T14:16:28.668Z",
+      "name": "Ramesh Singh (Helicopter Dynamics)",
+      "email": "ramesh@hal-india.co.in",
+      "department": "Helicopter Division",
+      "role": "Engineer",
+      "reason": "Need access to upload test flight telemetry logs.",
+      "status": "pending"
+    },
+    {
+      "id": "2f1f00i6a",
+      "_id": "ivi19gznf",
+      "createdAt": "2026-06-15T14:16:28.669Z",
+      "updatedAt": "2026-06-15T14:16:28.669Z",
+      "name": "Priya Sharma (Engine Design)",
+      "email": "priya@hal-india.co.in",
+      "department": "Engine Division",
+      "role": "Engineer",
+      "reason": "Need access to check titanium nozzle stress reports.",
+      "status": "pending"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Premium Scrollbars */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(13, 37, 69, 0.2);
+    border-radius: 4px;
+  }
+  .dark ::-webkit-scrollbar-thumb {
+    background: rgba(141, 169, 196, 0.2);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(13, 37, 69, 0.4);
+  }
+  .dark ::-webkit-scrollbar-thumb:hover {
+    background: rgba(141, 169, 196, 0.4);
+  }
+}
+
+@layer components {
+  /* Premium Glassmorphic Overlay */
+  .glass-panel {
+    @apply bg-white/80 backdrop-blur-md border border-slate-200/50 shadow-lg shadow-slate-100/40;
+  }
+  .dark .glass-panel {
+    @apply bg-hal-darkCard/80 backdrop-blur-md border border-hal-darkBorder/40 shadow-none;
+  }
+
+  /* Executive aerospace grid lines background */
+  .grid-aerospace {
+    background-size: 40px 40px;
+    background-image: 
+      linear-gradient(to right, rgba(141, 169, 196, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(141, 169, 196, 0.05) 1px, transparent 1px);
+  }
+  .dark .grid-aerospace {
+    background-image: 
+      linear-gradient(to right, rgba(56, 189, 248, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(56, 189, 248, 0.03) 1px, transparent 1px);
+  }
+
+  /* Aerospace Glowing Border effects */
+  .glow-card {
+    transition: all 0.3s ease;
+  }
+  .glow-card:hover {
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.15);
+    border-color: rgba(56, 189, 248, 0.3);
+  }
+}
