@@ -4,7 +4,8 @@ const dotenv = require('dotenv');
 const path = require('path');
 const { connectDB } = require('./services/db');
 const apiRouter = require('./routes/api');
-const { Issue, AuditLog } = require('./models');
+const { Issue, AuditLog, User } = require('./models');
+const { seed } = require('./seed');
 
 // Load environment configurations
 dotenv.config();
@@ -35,6 +36,19 @@ app.get('/health', (req, res) => {
 // Start Express server and connect Database
 async function bootstrap() {
   await connectDB();
+  
+  // Check if User collection is empty on startup, and seed if needed
+  try {
+    const existingUsers = await User.find({});
+    if (existingUsers.length === 0) {
+      console.log('No users found in database. Running automatic seeding...');
+      await seed(false);
+    } else {
+      console.log(`Database already has ${existingUsers.length} user(s). Skipping automatic seeding.`);
+    }
+  } catch (err) {
+    console.error('Error during automatic database seeding check:', err);
+  }
   
   app.listen(PORT, () => {
     console.log(`=======================================================`);

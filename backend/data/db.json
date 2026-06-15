@@ -1,13 +1,13 @@
 {
   "users": [
     {
-      "id": "jey08squx",
-      "_id": "cxbp2r0dr",
-      "createdAt": "2026-06-15T14:16:28.235Z",
-      "updatedAt": "2026-06-15T14:16:28.235Z",
+      "id": "1701bw1w7",
+      "_id": "mp4m49hcq",
+      "createdAt": "2026-06-15T16:32:35.812Z",
+      "updatedAt": "2026-06-15T16:32:35.812Z",
       "name": "Administrator",
       "email": "admin@halbrain.com",
-      "password": "$2a$10$8lQjI9tGE4PjmdGV8PScHu4/HbNygjiqxXBJboMmLNux3HQOeEZ62",
+      "password": "$2a$10$ODJTGVw00qk6hcnq.NBjROl2UHzH2PDEvkudtSh5WSH.ftxvA9Gd.",
       "role": "Administrator",
       "department": "Information Technology",
       "employeeId": "admin",
@@ -16,13 +16,13 @@
       "plainPassword": "admin123"
     },
     {
-      "id": "x22hvjohl",
-      "_id": "8vx42n6nn",
-      "createdAt": "2026-06-15T14:16:28.341Z",
-      "updatedAt": "2026-06-15T14:16:28.341Z",
+      "id": "i82b5n3qn",
+      "_id": "j6deltrj6",
+      "createdAt": "2026-06-15T16:32:35.892Z",
+      "updatedAt": "2026-06-15T16:32:35.892Z",
       "name": "Dr. Vivek Murthy (PM-Avionics)",
       "email": "pm@hal-india.co.in",
-      "password": "$2a$10$xKgGl.z0AKTYvTPoQ4JX5.BFt6/U/bqVI2v0cY0ufqyOvMHF3BrxW",
+      "password": "$2a$10$GDd8UamUocqxO4UXOBxqCOVFumEtCHcNSrQvqRXz0ITg8W80OkcJi",
       "role": "Project Manager",
       "department": "Avionics Division",
       "employeeId": "HAL-2026-0002",
@@ -31,13 +31,13 @@
       "plainPassword": "pm123"
     },
     {
-      "id": "im9e024dr",
-      "_id": "bqzlomuo7",
-      "createdAt": "2026-06-15T14:16:28.446Z",
-      "updatedAt": "2026-06-15T14:16:28.446Z",
+      "id": "jfirtk1bo",
+      "_id": "0fxjhnexh",
+      "createdAt": "2026-06-15T16:32:35.973Z",
+      "updatedAt": "2026-06-15T16:32:35.973Z",
       "name": "Sanjay Rawat (Lead Aerodynamics)",
       "email": "engineer@hal-india.co.in",
-      "password": "$2a$10$LqbBu4vwWkscYuHUKyyryexBbsWW9lNt60wt3UseKIWs.r1.qjzla",
+      "password": "$2a$10$nYepYRaAXY7QHyZXqJkQuOYbvvmOQmM.TDIw3DVqueBnrGiP5HLVa",
       "role": "Engineer",
       "department": "Design Division",
       "employeeId": "HAL-2026-0003",
@@ -46,13 +46,13 @@
       "plainPassword": "eng123"
     },
     {
-      "id": "3rycc8ezn",
-      "_id": "e70w04zsz",
-      "createdAt": "2026-06-15T14:16:28.549Z",
-      "updatedAt": "2026-06-15T14:16:28.549Z",
+      "id": "quwpov7qa",
+      "_id": "pkqh9puy8",
+      "createdAt": "2026-06-15T16:32:36.052Z",
+      "updatedAt": "2026-06-15T16:32:36.052Z",
       "name": "Kiran Bedi (Propulsion Systems)",
       "email": "employee@hal-india.co.in",
-      "password": "$2a$10$45NM5ekwap2kMnRWr1ZkiO0nHFVhk6KVsCpfwjWz74flgnXNuANnG",
+      "password": "$2a$10$XElJ6GWX15rgk4d29ULFPeKfzLhnvNdP7iLjoeuRteYljB7JynQl2",
       "role": "Employee",
       "department": "Engine Division",
       "employeeId": "HAL-2026-0004",
@@ -61,13 +61,13 @@
       "plainPassword": "emp123"
     },
     {
-      "id": "ho3bsaycu",
-      "_id": "5y9z04m4k",
-      "createdAt": "2026-06-15T14:16:28.655Z",
-      "updatedAt": "2026-06-15T14:16:28.655Z",
+      "id": "mzoelsyze",
+      "_id": "3hppn614e",
+      "createdAt": "2026-06-15T16:32:36.133Z",
+      "updatedAt": "2026-06-15T16:32:36.133Z",
       "name": "Sub. Lt. Neha Sharma (Avionics)",
       "email": "tempuser@hal-india.co.in",
-      "password": "$2a$10$Nfv6WTnAu8YBgq69uCvlWuC5v1hd2D9N6DccymxuuQuFiSI.m5q26",
+      "password": "$2a$10$nDY1XG7MQd3WaWXlHUCh3eS3snvoMkdY./kQE2P2cUObxw5J.Qz06",
       "role": "Employee",
       "department": "Avionics Division",
       "employeeId": "HAL-2026-9090",
@@ -78,10 +78,10 @@
   ],
   "projects": [
     {
-      "id": "xpfi6vrzb",
-      "_id": "i6wr5iuoy",
-      "createdAt": "2026-06-15T14:16:28.656Z",
-      "updatedAt": "2026-06-15T14:16:28.656Z",
+      "id": "bstsk3frg",
+      "_id": "vfrovnoiv",
+      "createdAt": "2026-06-15T16:32:36.133Z",
+      "updatedAt": "2026-06-15T16:32:36.133Z",
       "name": "LCA Tejas Mk2 Design & Development",
       "department": "Design Division",
       "startDate": "2025-01-15",
@@ -127,10 +127,10 @@
       ]
     },
     {
-      "id": "xrhosiktt",
-      "_id": "rx9qkadji",
-      "createdAt": "2026-06-15T14:16:28.657Z",
-      "updatedAt": "2026-06-15T14:16:28.657Z",
+      "id": "7nrels7t7",
+      "_id": "3kzgox8an",
+      "createdAt": "2026-06-15T16:32:36.134Z",
+      "updatedAt": "2026-06-15T16:32:36.134Z",
       "name": "Su-30 MKI Flight Computer Upgrade",
       "department": "Avionics Division",
       "startDate": "2024-03-01",
@@ -170,10 +170,10 @@
       ]
     },
     {
-      "id": "0y5r70vt5",
-      "_id": "17m4ea6px",
-      "createdAt": "2026-06-15T14:16:28.658Z",
-      "updatedAt": "2026-06-15T14:16:28.658Z",
+      "id": "fv8jqe5ra",
+      "_id": "sfz1i8853",
+      "createdAt": "2026-06-15T16:32:36.135Z",
+      "updatedAt": "2026-06-15T16:32:36.135Z",
       "name": "AMCA Fifth-Gen Stealth Fighter R&D",
       "department": "Research & Development",
       "startDate": "2026-01-01",
@@ -205,10 +205,10 @@
   ],
   "decisions": [
     {
-      "id": "qer36ml96",
-      "_id": "y8kuqv7m7",
-      "createdAt": "2026-06-15T14:16:28.659Z",
-      "updatedAt": "2026-06-15T14:16:28.659Z",
+      "id": "1089x2yek",
+      "_id": "bedvo2tqv",
+      "createdAt": "2026-06-15T16:32:36.136Z",
+      "updatedAt": "2026-06-15T16:32:36.136Z",
       "title": "Replacement of Primary Fly-by-Wire Supplier",
       "projectName": "LCA Tejas Mk2 Design & Development",
       "department": "Avionics Division",
@@ -225,10 +225,10 @@
       "date": "2026-04-12"
     },
     {
-      "id": "8qe7d8gaf",
-      "_id": "v19yuegrf",
-      "createdAt": "2026-06-15T14:16:28.662Z",
-      "updatedAt": "2026-06-15T14:16:28.662Z",
+      "id": "dcfwows87",
+      "_id": "9n911igto",
+      "createdAt": "2026-06-15T16:32:36.137Z",
+      "updatedAt": "2026-06-15T16:32:36.137Z",
       "title": "Adoption of Titanium Grade-5 for Nozzle Mount Assembly",
       "projectName": "Su-30 MKI Flight Computer Upgrade",
       "department": "Design Division",
@@ -244,10 +244,10 @@
       "date": "2026-05-18"
     },
     {
-      "id": "51b4xe3tk",
-      "_id": "fgbr0klat",
-      "createdAt": "2026-06-15T14:16:28.664Z",
-      "updatedAt": "2026-06-15T14:16:28.664Z",
+      "id": "e37u41u95",
+      "_id": "t8j7894p9",
+      "createdAt": "2026-06-15T16:32:36.137Z",
+      "updatedAt": "2026-06-15T16:32:36.137Z",
       "title": "Divergent Nozzle Intake Grid Redesign",
       "projectName": "AMCA Fifth-Gen Stealth Fighter R&D",
       "department": "Research & Development",
@@ -265,10 +265,10 @@
   ],
   "issues": [
     {
-      "id": "slia5twni",
-      "_id": "vc0c57521",
-      "createdAt": "2026-06-15T14:16:28.665Z",
-      "updatedAt": "2026-06-15T14:16:28.665Z",
+      "id": "lkeydf763",
+      "_id": "exjof6do3",
+      "createdAt": "2026-06-15T16:32:36.138Z",
+      "updatedAt": "2026-06-15T16:32:36.138Z",
       "title": "Landing Gear Deployment Valve Pressure Drops",
       "description": "Telemetry alerts showing sudden 15% pressure drop in hydraulic loop line B-4 during continuous cycles test on test jig 8.",
       "department": "Design Division",
@@ -285,10 +285,10 @@
       "slaAlertsSent": false
     },
     {
-      "id": "w0ll0whl7",
-      "_id": "fm63edukh",
-      "createdAt": "2026-06-15T14:16:28.666Z",
-      "updatedAt": "2026-06-15T14:16:28.666Z",
+      "id": "tdz79y6id",
+      "_id": "xj3yreico",
+      "createdAt": "2026-06-15T16:32:36.139Z",
+      "updatedAt": "2026-06-15T16:32:36.139Z",
       "title": "Radar Target Tracking Drift in Thermographic Flights",
       "description": "Target tracking accuracy displays an azimuthal drift of 0.4 degrees when the radar nose cone structure heats above 75 degrees C.",
       "department": "Avionics Division",
@@ -305,10 +305,10 @@
       "slaAlertsSent": false
     },
     {
-      "id": "83jvepqhr",
-      "_id": "sz95culs7",
-      "createdAt": "2026-06-15T14:16:28.667Z",
-      "updatedAt": "2026-06-15T14:16:28.667Z",
+      "id": "epz2e61or",
+      "_id": "lf4a512za",
+      "createdAt": "2026-06-15T16:32:36.139Z",
+      "updatedAt": "2026-06-15T16:32:36.139Z",
       "title": "Engine Afterburner Fuel Spurt Flutter",
       "description": "Unstable pressure pulsations observed during ground trials of HTT-40 engine block when throttling between military and reheat levels.",
       "department": "Engine Division",
@@ -325,10 +325,10 @@
   ],
   "documents": [
     {
-      "id": "hd1atp38y",
-      "_id": "cphvgnvm5",
-      "createdAt": "2026-06-15T14:16:28.671Z",
-      "updatedAt": "2026-06-15T14:16:28.671Z",
+      "id": "n7ar19v7p",
+      "_id": "k9fm3b3o3",
+      "createdAt": "2026-06-15T16:32:36.143Z",
+      "updatedAt": "2026-06-15T16:32:36.143Z",
       "name": "AeroSystems_Timeline_Audit.pdf",
       "path": "AeroSystems_Timeline_Audit.pdf",
       "extension": "PDF",
@@ -344,16 +344,16 @@
         {
           "version": "1.0.0",
           "path": "AeroSystems_Timeline_Audit.pdf",
-          "date": "2026-06-15T14:16:28.671Z",
+          "date": "2026-06-15T16:32:36.142Z",
           "uploader": "Dr. Vivek Murthy (PM-Avionics)"
         }
       ]
     },
     {
-      "id": "9nruxhrtl",
-      "_id": "bri7kno3q",
-      "createdAt": "2026-06-15T14:16:28.673Z",
-      "updatedAt": "2026-06-15T14:16:28.673Z",
+      "id": "30h0qzixt",
+      "_id": "o8fg8yseo",
+      "createdAt": "2026-06-15T16:32:36.143Z",
+      "updatedAt": "2026-06-15T16:32:36.143Z",
       "name": "ElectronicsB_Proposal_V3.pdf",
       "path": "ElectronicsB_Proposal_V3.pdf",
       "extension": "PDF",
@@ -369,16 +369,16 @@
         {
           "version": "1.0.0",
           "path": "ElectronicsB_Proposal_V3.pdf",
-          "date": "2026-06-15T14:16:28.672Z",
+          "date": "2026-06-15T16:32:36.143Z",
           "uploader": "Dr. Vivek Murthy (PM-Avionics)"
         }
       ]
     },
     {
-      "id": "cjk2iyuyr",
-      "_id": "5yljif75e",
-      "createdAt": "2026-06-15T14:16:28.674Z",
-      "updatedAt": "2026-06-15T14:16:28.674Z",
+      "id": "dhhsm8pwi",
+      "_id": "q5cz7i2b1",
+      "createdAt": "2026-06-15T16:32:36.144Z",
+      "updatedAt": "2026-06-15T16:32:36.144Z",
       "name": "Thermal_Stress_Report_Su30.pdf",
       "path": "Thermal_Stress_Report_Su30.pdf",
       "extension": "PDF",
@@ -394,16 +394,16 @@
         {
           "version": "1.0.0",
           "path": "Thermal_Stress_Report_Su30.pdf",
-          "date": "2026-06-15T14:16:28.674Z",
+          "date": "2026-06-15T16:32:36.144Z",
           "uploader": "Dr. Vivek Murthy (PM-Avionics)"
         }
       ]
     },
     {
-      "id": "9l8kxn7tz",
-      "_id": "i785zcuq7",
-      "createdAt": "2026-06-15T14:16:28.676Z",
-      "updatedAt": "2026-06-15T14:16:28.676Z",
+      "id": "905ouzide",
+      "_id": "d1aneycmv",
+      "createdAt": "2026-06-15T16:32:36.145Z",
+      "updatedAt": "2026-06-15T16:32:36.145Z",
       "name": "Azimuth_Drift_Graph.pdf",
       "path": "Azimuth_Drift_Graph.pdf",
       "extension": "PDF",
@@ -419,7 +419,7 @@
         {
           "version": "1.0.0",
           "path": "Azimuth_Drift_Graph.pdf",
-          "date": "2026-06-15T14:16:28.676Z",
+          "date": "2026-06-15T16:32:36.145Z",
           "uploader": "Dr. Vivek Murthy (PM-Avionics)"
         }
       ]
@@ -427,56 +427,23 @@
   ],
   "auditlogs": [
     {
-      "id": "0ue22eazd",
-      "_id": "iv93vvbiz",
-      "createdAt": "2026-06-15T14:16:28.680Z",
-      "updatedAt": "2026-06-15T14:16:28.680Z",
+      "id": "17kw6qdrs",
+      "_id": "rzzmzyod5",
+      "createdAt": "2026-06-15T16:32:36.146Z",
+      "updatedAt": "2026-06-15T16:32:36.146Z",
       "userId": "System",
       "userName": "HAL's BRAIN Seeder",
       "action": "Database Hydration",
       "details": "Successfully populated HAL's BRAIN workspace users, divisions, projects, access request logs, and issue tickets.",
       "ipAddress": "127.0.0.1"
-    },
-    {
-      "id": "xg7ogkqso",
-      "_id": "tkoxp8y0b",
-      "createdAt": "2026-06-15T14:17:27.017Z",
-      "updatedAt": "2026-06-15T14:17:27.017Z",
-      "userId": "jey08squx",
-      "userName": "Administrator",
-      "action": "AI Assist Query",
-      "details": "Asked: \"Why was AeroSystems FBW supplier replaced?...\" [Mode: Beginner]",
-      "ipAddress": "::1"
-    },
-    {
-      "id": "nbmvuxu49",
-      "_id": "kzvo4ya5z",
-      "createdAt": "2026-06-15T14:29:52.769Z",
-      "updatedAt": "2026-06-15T14:29:52.769Z",
-      "userId": "x22hvjohl",
-      "userName": "Dr. Vivek Murthy (PM-Avionics)",
-      "action": "AI Assist Query",
-      "details": "Asked: \"What was the reason for adopting Titanium on Su-30...\" [Mode: Professional]",
-      "ipAddress": "::1"
-    },
-    {
-      "id": "8n36vywp2",
-      "_id": "k1ltpj72i",
-      "createdAt": "2026-06-15T14:30:07.898Z",
-      "updatedAt": "2026-06-15T14:30:07.898Z",
-      "userId": "x22hvjohl",
-      "userName": "Dr. Vivek Murthy (PM-Avionics)",
-      "action": "AI Assist Query",
-      "details": "Asked: \"in simple...\" [Mode: Professional]",
-      "ipAddress": "::1"
     }
   ],
   "accessrequests": [
     {
-      "id": "95a5gllxg",
-      "_id": "kyhapvr0v",
-      "createdAt": "2026-06-15T14:16:28.668Z",
-      "updatedAt": "2026-06-15T14:16:28.668Z",
+      "id": "kyp9fomqr",
+      "_id": "dzf9cl1vy",
+      "createdAt": "2026-06-15T16:32:36.140Z",
+      "updatedAt": "2026-06-15T16:32:36.140Z",
       "name": "Ramesh Singh (Helicopter Dynamics)",
       "email": "ramesh@hal-india.co.in",
       "department": "Helicopter Division",
@@ -485,10 +452,10 @@
       "status": "pending"
     },
     {
-      "id": "2f1f00i6a",
-      "_id": "ivi19gznf",
-      "createdAt": "2026-06-15T14:16:28.669Z",
-      "updatedAt": "2026-06-15T14:16:28.669Z",
+      "id": "fw588gx55",
+      "_id": "dbobb8ddh",
+      "createdAt": "2026-06-15T16:32:36.141Z",
+      "updatedAt": "2026-06-15T16:32:36.141Z",
       "name": "Priya Sharma (Engine Design)",
       "email": "priya@hal-india.co.in",
       "department": "Engine Division",

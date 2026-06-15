@@ -227,9 +227,23 @@ const issuesData = [
   }
 ];
 
-async function seed() {
-  await connectDB();
+async function seed(isManual = false) {
+  if (!isMongoConnected()) {
+    await connectDB();
+  }
   const mongoActive = isMongoConnected();
+
+  if (!isManual) {
+    try {
+      const existingUsers = await User.find({});
+      if (existingUsers.length > 0) {
+        console.log('Users already exist in database. Skipping automatic seeding.');
+        return;
+      }
+    } catch (err) {
+      console.error('Failed checking if users exist:', err);
+    }
+  }
 
   console.log('Starting seed operations...');
 
@@ -344,7 +358,9 @@ async function seed() {
   });
 
   console.log('Database seeding successfully finished!');
-  process.exit(0);
+  if (isManual) {
+    process.exit(0);
+  }
 }
 
 // Get models objects referenced in mongoose from schema definitions file
@@ -370,4 +386,8 @@ if (mongoose.models.User) {
   AccessRequestMongoose = mongoose.models.AccessRequest;
 }
 
-seed();
+if (require.main === module) {
+  seed(true);
+}
+
+module.exports = { seed };

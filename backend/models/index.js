@@ -6,10 +6,10 @@ const userSchema = new mongoose.Schema({
   name: { type: String, required: true },
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
-  role: { 
-    type: String, 
-    enum: ['Administrator', 'Project Manager', 'Engineer', 'Employee'], 
-    default: 'Employee' 
+  role: {
+    type: String,
+    enum: ['Administrator', 'Project Manager', 'Engineer', 'Employee'],
+    default: 'Employee'
   },
   department: { type: String, required: true },
   employeeId: { type: String, default: '' },
@@ -36,10 +36,10 @@ const projectSchema = new mongoose.Schema({
   startDate: { type: String, required: true },
   endDate: { type: String, required: true },
   projectManager: { type: String, required: true }, // Name or ID
-  status: { 
-    type: String, 
-    enum: ['Not Started', 'Active', 'Completed', 'Delayed'], 
-    default: 'Active' 
+  status: {
+    type: String,
+    enum: ['Not Started', 'Active', 'Completed', 'Delayed'],
+    default: 'Active'
   },
   progressPercentage: { type: Number, default: 0 },
   milestones: [{
@@ -65,10 +65,10 @@ const decisionSchema = new mongoose.Schema({
   benefits: { type: String, required: true },
   risks: { type: String, required: true },
   supportingDocuments: [{ type: String }],
-  approvalStatus: { 
-    type: String, 
-    enum: ['Pending', 'Approved', 'Rejected'], 
-    default: 'Pending' 
+  approvalStatus: {
+    type: String,
+    enum: ['Pending', 'Approved', 'Rejected'],
+    default: 'Pending'
   },
   createdBy: { type: String, required: true },
   date: { type: String, required: true }
@@ -79,20 +79,20 @@ const issueSchema = new mongoose.Schema({
   title: { type: String, required: true },
   description: { type: String, required: true },
   department: { type: String, required: true },
-  priority: { 
-    type: String, 
-    enum: ['Low', 'Medium', 'High', 'Critical'], 
-    default: 'Medium' 
+  priority: {
+    type: String,
+    enum: ['Low', 'Medium', 'High', 'Critical'],
+    default: 'Medium'
   },
-  severity: { 
-    type: String, 
-    enum: ['Minor', 'Major', 'Critical', 'Blocker'], 
-    default: 'Major' 
+  severity: {
+    type: String,
+    enum: ['Minor', 'Major', 'Critical', 'Blocker'],
+    default: 'Major'
   },
-  status: { 
-    type: String, 
-    enum: ['Reported', 'Assigned', 'In Progress', 'Under Review', 'Resolved', 'Closed'], 
-    default: 'Reported' 
+  status: {
+    type: String,
+    enum: ['Reported', 'Assigned', 'In Progress', 'Under Review', 'Resolved', 'Closed'],
+    default: 'Reported'
   },
   assignedTo: { type: String, default: '' },
   reportedBy: { type: String, required: true },
