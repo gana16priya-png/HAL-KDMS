@@ -28,7 +28,7 @@ export default function Login() {
     setLoading(true);
 
     try {
-      const res = await fetch('/api/auth/login', {
+      const res = await fetch('https://hal-kdms-backend.onrender.com/api/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password })
@@ -56,12 +56,12 @@ export default function Login() {
 
   return (
     <div className="min-h-screen bg-slate-900 flex items-center justify-center py-12 px-6 lg:px-8 font-sans relative overflow-hidden select-none">
-      
+
       {/* Background visual cues */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(56,189,248,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(56,189,248,0.02)_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none"></div>
 
       <div className="max-w-md w-full space-y-8 relative z-10">
-        
+
         {/* Portal Header */}
         <div className="flex flex-col items-center">
           <div className="p-3 bg-sky-500/10 border border-sky-400/20 rounded-2xl mb-4">
@@ -81,7 +81,7 @@ export default function Login() {
           )}
 
           <form onSubmit={handleSubmit} className="space-y-6">
-            
+
             {/* Email/Employee ID Field */}
             <div>
               <label htmlFor="email" className="block text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-2">Security ID (Email or Employee ID)</label>
