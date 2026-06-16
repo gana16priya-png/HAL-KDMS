@@ -74,7 +74,7 @@ export default function Dashboard() {
 
   const fetchDashboardData = async () => {
     try {
-      const res = await fetch(`${API_URL}/analytics/dashboard', {
+      const res = await fetch(`${API_URL}/api/analytics/dashboard`, {
         headers: { 'Authorization': `Bearer ${ token }` }
       });
       if (res.ok) {
@@ -91,9 +91,9 @@ export default function Dashboard() {
   const fetchAllData = async () => {
     try {
       const [decRes, projRes, issRes] = await Promise.all([
-        fetch(`${ API_URL } / decisions`, { headers: { 'Authorization': `Bearer ${ token }` } }),
-        fetch(`${ API_URL } / projects`, { headers: { 'Authorization': `Bearer ${ token }` } }),
-        fetch(`${ API_URL } / issues`, { headers: { 'Authorization': `Bearer ${ token }` } })
+        fetch(`${API_URL}/api/decisions`, { headers: { 'Authorization': `Bearer ${token}` } }),
+        fetch(`${API_URL}/api/projects`, { headers: { 'Authorization': `Bearer ${token}` } }),
+        fetch(`${API_URL}/api/issues`, { headers: { 'Authorization': `Bearer ${token}` } })
       ]);
       if (decRes.ok) setDecisions(await decRes.json());
       if (projRes.ok) setProjects(await projRes.json());
@@ -105,7 +105,7 @@ export default function Dashboard() {
 
   const fetchLogs = async () => {
     try {
-      const res = await fetch(`${ API_URL } / auditlogs', {
+      const res = await fetch(`${API_URL}/api/auditlogs`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
     if (res.ok) {

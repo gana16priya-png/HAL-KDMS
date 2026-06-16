@@ -15,7 +15,7 @@ export default function AuditLogs() {
 
   const fetchLogs = async () => {
     try {
-      const res = await fetch(`${API_URL}/auditlogs', {
+      const res = await fetch(`${API_URL}/api/auditlogs`, {
         headers: { 'Authorization': `Bearer ${ token }` }
       });
       if (res.ok) {

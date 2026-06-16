@@ -35,10 +35,10 @@ export default function KnowledgeRepository() {
       setLoading(true);
       // Fetch concurrently
       const [decRes, projRes, issRes, docRes] = await Promise.all([
-        fetch(`${API_URL}/decisions', { headers: { 'Authorization': `Bearer ${ token }` } }),
-        fetch(`${ API_URL } / projects', { headers: { 'Authorization': `Bearer ${token}` } }),
-        fetch(`${API_URL}/issues', { headers: { 'Authorization': `Bearer ${ token }` } }),
-        fetch(`${ API_URL } / documents', { headers: { 'Authorization': `Bearer ${token}` } })
+        fetch(`${API_URL}/api/decisions`, { headers: { 'Authorization': `Bearer ${token}` } }),
+        fetch(`${API_URL}/api/projects`, { headers: { 'Authorization': `Bearer ${token}` } }),
+        fetch(`${API_URL}/api/issues`, { headers: { 'Authorization': `Bearer ${token}` } }),
+        fetch(`${API_URL}/api/documents`, { headers: { 'Authorization': `Bearer ${token}` } })
       ]);
 
       let decisions = decRes.ok ? await decRes.json() : [];

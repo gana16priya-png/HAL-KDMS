@@ -66,7 +66,7 @@ export default function EmployeeManagement() {
   const fetchEmployees = async () => {
     try {
       setLoading(true);
-      const res = await fetch(`${API_URL}/auth/users', {
+      const res = await fetch(`${API_URL}/api/auth/users`, {
         headers: { 'Authorization': `Bearer ${ token }` }
       });
       if (res.ok) {
@@ -90,7 +90,7 @@ export default function EmployeeManagement() {
     }
 
     try {
-      const res = await fetch(`${ API_URL } / auth / users', {
+      const res = await fetch(`${API_URL}/api/auth/users`, {
         method: 'POST',
         headers: {
         'Content-Type': 'application/json',
@@ -154,7 +154,7 @@ const handleEditEmployee = async (e) => {
   setEditSuccess('');
 
   try {
-    const res = await fetch(`/api/auth/users/${selectedEmp.id || selectedEmp._id}`, {
+    const res = await fetch(`${API_URL}/api/auth/users/${selectedEmp.id || selectedEmp._id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -200,7 +200,7 @@ const handleDeleteEmployee = async (id) => {
   }
 
   try {
-    const res = await fetch(`/api/auth/users/${id}`, {
+    const res = await fetch(`${API_URL}/api/auth/users/${id}`, {
       method: 'DELETE',
       headers: {
         'Authorization': `Bearer ${token}`
@@ -226,7 +226,7 @@ const handleToggleStatus = async (emp) => {
 
   const nextStatus = emp.status === 'active' ? 'deactivated' : 'active';
   try {
-    const res = await fetch(`/api/auth/users/${emp.id || emp._id}`, {
+    const res = await fetch(`${API_URL}/api/auth/users/${emp.id || emp._id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',

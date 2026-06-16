@@ -38,7 +38,7 @@ export default function DocumentRepository() {
 
   const fetchDocuments = async () => {
     try {
-      const res = await fetch(`${API_URL}/documents', {
+      const res = await fetch(`${API_URL}/api/documents`, {
         headers: { 'Authorization': `Bearer ${ token }` }
       });
       if (res.ok) {
@@ -68,7 +68,7 @@ export default function DocumentRepository() {
     formData.append('tags', tags);
 
     try {
-      const res = await fetch(`${ API_URL } / documents / upload', {
+      const res = await fetch(`${API_URL}/api/documents/upload`, {
         method: 'POST',
         headers: {
         'Authorization': `Bearer ${token}`
@@ -99,7 +99,7 @@ const handleSelectDoc = async (doc) => {
 
   try {
     // Fetch text contents of the document
-    const res = await fetch(`/api/documents/download/${doc.path}`, {
+    const res = await fetch(`${API_URL}/api/documents/download/${doc.path}`, {
       headers: { 'Authorization': `Bearer ${token}` }
     });
     if (res.ok) {
@@ -310,7 +310,7 @@ return (
                 <h3 className="font-extrabold text-sm text-slate-850 dark:text-white mt-0.5 truncate max-w-[200px]">{selectedDoc.name}</h3>
               </div>
               <a
-                href={`/api/documents/download/${selectedDoc.path}?auth_token=${token}`}
+                href={`${API_URL}/api/documents/download/${selectedDoc.path}?auth_token=${token}`}
                 download={selectedDoc.name}
                 className="p-2 bg-slate-50 hover:bg-slate-100 text-slate-600 rounded-xl border border-slate-200/60 dark:bg-slate-900/60 dark:border-slate-800 dark:text-sky-400"
               >

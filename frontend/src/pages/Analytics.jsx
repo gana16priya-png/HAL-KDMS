@@ -54,7 +54,7 @@ export default function Analytics() {
 
   const fetchAnalyticsData = async () => {
     try {
-      const res = await fetch(`${API_URL}/analytics/dashboard', {
+      const res = await fetch(`${API_URL}/api/analytics/dashboard`, {
         headers: { 'Authorization': `Bearer ${ token }` }
       });
       if (res.ok) {

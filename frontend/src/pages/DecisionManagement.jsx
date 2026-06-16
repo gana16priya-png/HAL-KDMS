@@ -45,7 +45,7 @@ export default function DecisionManagement() {
 
   const fetchDecisions = async () => {
     try {
-      const res = await fetch(`${API_URL}/decisions', {
+      const res = await fetch(`${API_URL}/api/decisions`, {
         headers: { 'Authorization': `Bearer ${ token }` }
       });
       if (res.ok) {
@@ -69,7 +69,7 @@ export default function DecisionManagement() {
     const docs = docsInput ? docsInput.split(',').map(d => d.trim()) : [];
 
     try {
-      const res = await fetch(`${ API_URL } / decisions', {
+      const res = await fetch(`${API_URL}/api/decisions`, {
         method: 'POST',
         headers: {
         'Content-Type': 'application/json',
@@ -109,7 +109,7 @@ export default function DecisionManagement() {
 
 const handleUpdateStatus = async (id, approvalStatus) => {
   try {
-    const res = await fetch(`/api/decisions/${id}/status`, {
+    const res = await fetch(`${API_URL}/api/decisions/${id}/status`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -132,10 +132,10 @@ const handleUpdateStatus = async (id, approvalStatus) => {
 
 const handleDownloadPDF = (id) => {
   // Triggers standard window routing download
-  window.open(`/api/decisions/${id}/pdf?auth_token=${token}`, '_blank');
+  window.open(`${API_URL}/api/decisions/${id}/pdf?auth_token=${token}`, '_blank');
 
   // Fallback: fetch API with authorization header and download PDF
-  fetch(`/api/decisions/${id}/pdf`, {
+  fetch(`${API_URL}/api/decisions/${id}/pdf`, {
     headers: { 'Authorization': `Bearer ${token}` }
   })
     .then(res => {

@@ -28,7 +28,7 @@ export default function RequestAccess() {
     setLoading(true);
 
     try {
-      const res = await fetch(`${API_URL}/auth/request-access', {
+      const res = await fetch(`${API_URL}/api/auth/request-access`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, email, department, role, reason })

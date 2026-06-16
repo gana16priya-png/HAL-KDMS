@@ -51,7 +51,7 @@ export default function IssueTracker() {
 
   const fetchIssues = async () => {
     try {
-      const res = await fetch(`${API_URL}/issues', {
+      const res = await fetch(`${API_URL}/api/issues`, {
         headers: { 'Authorization': `Bearer ${ token }` }
       });
       if (res.ok) {
@@ -71,7 +71,7 @@ export default function IssueTracker() {
 
     setError('');
     try {
-      const res = await fetch(`${ API_URL } / issues', {
+      const res = await fetch(`${API_URL}/api/issues`, {
         method: 'POST',
         headers: {
         'Content-Type': 'application/json',
@@ -100,7 +100,7 @@ const handleUpdate = async (e) => {
 
   setEditError('');
   try {
-    const res = await fetch(`/api/issues/${selectedIssue._id || selectedIssue.id}`, {
+    const res = await fetch(`${API_URL}/api/issues/${selectedIssue._id || selectedIssue.id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -132,10 +132,10 @@ const handleSelectIssue = (issue) => {
 };
 
 const handleDownloadPDF = (id) => {
-  window.open(`/api/issues/${id}/pdf?auth_token=${token}`, '_blank');
+  window.open(`${API_URL}/api/issues/${id}/pdf?auth_token=${token}`, '_blank');
 
   // Fallback: fetch API with authorization header
-  fetch(`/api/issues/${id}/pdf`, {
+  fetch(`${API_URL}/api/issues/${id}/pdf`, {
     headers: { 'Authorization': `Bearer ${token}` }
   })
     .then(res => {

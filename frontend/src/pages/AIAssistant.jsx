@@ -72,7 +72,7 @@ You can ask me questions about:
     setMessages(prev => [...prev, { sender: 'user', text: query }]);
 
     try {
-      const res = await fetch(`${API_URL}/ai/chat', {
+      const res = await fetch(`${API_URL}/api/ai/chat`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

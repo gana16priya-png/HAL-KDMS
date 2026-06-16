@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { AuthContext } from '../App';
+import { API_URL } from '../config';
 import {
   ShieldAlert,
   Users,
@@ -33,7 +34,7 @@ export default function AdminPanel() {
 
   const fetchUsers = async () => {
     try {
-      const res = await fetch(`${API_URL}/auth/users', {
+      const res = await fetch(`${API_URL}/api/auth/users`, {
         headers: { 'Authorization': `Bearer ${ token }` }
       });
       if (res.ok) {
@@ -49,7 +50,7 @@ export default function AdminPanel() {
 
   const fetchRequests = async () => {
     try {
-      const res = await fetch(`${ API_URL } / auth / access - requests', {
+      const res = await fetch(`${API_URL}/api/auth/access-requests`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
     if (res.ok) {
@@ -71,7 +72,7 @@ const handleChangeRole = async (userId, newRole) => {
   }
 
   try {
-    const res = await fetch(`/api/auth/users/${userId}/role`, {
+    const res = await fetch(`${API_URL}/api/auth/users/${userId}/role`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -97,7 +98,7 @@ const handleApprove = async (id, email) => {
   setError('');
   setGeneratedCreds(null);
   try {
-    const res = await fetch(`/api/auth/access-requests/${id}/approve`, {
+    const res = await fetch(`${API_URL}/api/auth/access-requests/${id}/approve`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -127,7 +128,7 @@ const handleReject = async (id) => {
   setError('');
   setGeneratedCreds(null);
   try {
-    const res = await fetch(`/api/auth/access-requests/${id}/reject`, {
+    const res = await fetch(`${API_URL}/api/auth/access-requests/${id}/reject`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

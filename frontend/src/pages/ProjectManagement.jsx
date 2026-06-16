@@ -46,7 +46,7 @@ export default function ProjectManagement() {
 
   const fetchProjects = async () => {
     try {
-      const res = await fetch(`${API_URL}/projects', {
+      const res = await fetch(`${API_URL}/api/projects`, {
         headers: { 'Authorization': `Bearer ${ token }` }
       });
       if (res.ok) {
@@ -77,7 +77,7 @@ export default function ProjectManagement() {
     }) : [];
 
     try {
-      const res = await fetch(`${ API_URL } / projects', {
+      const res = await fetch(`${API_URL}/api/projects`, {
         method: 'POST',
         headers: {
         'Content-Type': 'application/json',
@@ -125,7 +125,7 @@ const handleToggleMilestone = async (project, milestoneIdx) => {
   const progressPercentage = Math.round((completedCount / updatedMilestones.length) * 100);
 
   try {
-    const res = await fetch(`/api/projects/${project._id || project.id}`, {
+    const res = await fetch(`${API_URL}/api/projects/${project._id || project.id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -150,7 +150,7 @@ const handleToggleMilestone = async (project, milestoneIdx) => {
 // Update overall progress percentage manually
 const handleProgressChange = async (project, value) => {
   try {
-    const res = await fetch(`/api/projects/${project._id || project.id}`, {
+    const res = await fetch(`${API_URL}/api/projects/${project._id || project.id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',

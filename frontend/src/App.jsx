@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { HashRouter as Router, Routes, Route, Navigate, useNavigate } from 'react-router-dom';
+import { API_URL } from './config';
 
 // Layout components
 import Sidebar from './components/Sidebar';
@@ -57,7 +58,7 @@ export default function App() {
 
   const fetchProfile = async () => {
     try {
-      const res = await fetch('https://hal-kdms-backend.onrender.com/api/auth/me', {
+      const res = await fetch(`${API_URL}/api/auth/me`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
