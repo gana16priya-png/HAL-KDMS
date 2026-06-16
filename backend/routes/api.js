@@ -34,8 +34,8 @@ async function logActivity(req, action, details) {
   try {
     const userId = req.user ? req.user.id : 'Anonymous';
     const userName = req.user ? req.user.name : 'Anonymous';
-    const ipAddress = req.ip || req.connection.remoteAddress || '127.0.0.1';
-    
+    const ipAddress = req.ip || req.socket?.remoteAddress || '127.0.0.1';
+
     await AuditLog.create({
       userId,
       userName,
@@ -352,7 +352,7 @@ router.put('/auth/users/:id', authenticateJWT, requireRoles(['Administrator']), 
 
     const updatedUser = await User.findByIdAndUpdate(req.params.id, updates, { new: true });
     await logActivity(req, 'Update Employee Account', `Updated employee profile: ${updatedUser.email} (${updatedUser.employeeId})`);
-    
+
     res.json({ message: 'Employee account updated successfully.', user: updatedUser });
   } catch (err) {
     res.status(500).json({ message: 'Server error updating employee.' });
@@ -371,7 +371,7 @@ router.delete('/auth/users/:id', authenticateJWT, requireRoles(['Administrator']
 
     await User.findByIdAndDelete(req.params.id);
     await logActivity(req, 'Delete Employee Account', `Deleted employee account: ${targetUser.email} (${targetUser.employeeId})`);
-    
+
     res.json({ message: 'Employee account deleted successfully.' });
   } catch (err) {
     res.status(500).json({ message: 'Server error deleting employee.' });
@@ -419,7 +419,7 @@ router.put('/projects/:id', authenticateJWT, requireRoles(['Administrator', 'Pro
   try {
     const project = await Project.findByIdAndUpdate(req.params.id, req.body, { new: true });
     if (!project) return res.status(404).json({ message: 'Project not found.' });
-    
+
     await logActivity(req, 'Update Project', `Project updated: ${project.name} (Progress: ${project.progressPercentage}%)`);
     res.json(project);
   } catch (err) {
@@ -513,11 +513,11 @@ router.get('/decisions/:id/pdf', authenticateJWT, async (req, res) => {
     }
 
     const doc = new PDFDocument({ size: 'A4', margin: 50 });
-    
+
     // Set headers
     res.setHeader('Content-Type', 'application/pdf');
     res.setHeader('Content-Disposition', `attachment; filename=HAL_Brain_Decision_${d.title.replace(/\s+/g, '_')}.pdf`);
-    
+
     doc.pipe(res);
 
     // Vector Logo Graphics (HAL's BRAIN icon box)
@@ -529,7 +529,7 @@ router.get('/decisions/:id/pdf', authenticateJWT, async (req, res) => {
     doc.fillColor('#0B2545').fontSize(20).text('HINDUSTAN AERONAUTICS LIMITED', 120, 50, { underline: true });
     doc.fontSize(10).fillColor('#134074').text("HAL's BRAIN - Digital Aerospace Memory Portal", 120, 75);
     doc.moveDown(2);
-    
+
     doc.strokeColor('#134074').lineWidth(1.5).moveTo(50, doc.y).lineTo(545, doc.y).stroke();
     doc.moveDown(1.5);
 
@@ -543,11 +543,11 @@ router.get('/decisions/:id/pdf', authenticateJWT, async (req, res) => {
     doc.text(`Title: ${d.title}`, 60, startY);
     doc.text(`Project: ${d.projectName}`, 60, startY + 18);
     doc.text(`Division: ${d.department}`, 60, startY + 36);
-    
+
     doc.text(`Author: ${d.createdBy}`, 320, startY);
     doc.text(`Logged: ${d.date}`, 320, startY + 18);
     doc.text(`Approval Status: ${d.approvalStatus}`, 320, startY + 36);
-    
+
     doc.moveDown(4);
 
     // Line separator
@@ -606,11 +606,11 @@ router.get('/issues/:id/pdf', authenticateJWT, async (req, res) => {
     if (!issue) return res.status(404).json({ message: 'Issue record not found.' });
 
     const doc = new PDFDocument({ size: 'A4', margin: 50 });
-    
+
     // Set headers
     res.setHeader('Content-Type', 'application/pdf');
     res.setHeader('Content-Disposition', `attachment; filename=HAL_Brain_Issue_${issue.title.replace(/\s+/g, '_')}.pdf`);
-    
+
     doc.pipe(res);
 
     // Vector Logo Graphics (HAL's BRAIN icon box)
@@ -622,7 +622,7 @@ router.get('/issues/:id/pdf', authenticateJWT, async (req, res) => {
     doc.fillColor('#0B2545').fontSize(20).text('HINDUSTAN AERONAUTICS LIMITED', 120, 50, { underline: true });
     doc.fontSize(10).fillColor('#134074').text("HAL's BRAIN - Digital Aerospace Memory Portal", 120, 75);
     doc.moveDown(2);
-    
+
     doc.strokeColor('#134074').lineWidth(1.5).moveTo(50, doc.y).lineTo(545, doc.y).stroke();
     doc.moveDown(1.5);
 
@@ -636,11 +636,11 @@ router.get('/issues/:id/pdf', authenticateJWT, async (req, res) => {
     doc.text(`Title: ${issue.title}`, 60, startY);
     doc.text(`Status: ${issue.status}`, 60, startY + 18);
     doc.text(`Division: ${issue.department}`, 60, startY + 36);
-    
+
     doc.text(`Reported By: ${issue.reportedBy}`, 320, startY);
     doc.text(`Priority: ${issue.priority}`, 320, startY + 18);
     doc.text(`Severity: ${issue.severity}`, 320, startY + 36);
-    
+
     doc.moveDown(4);
 
     // Line separator
@@ -863,7 +863,7 @@ router.get('/analytics/dashboard', authenticateJWT, async (req, res) => {
     const activeProjects = projects.filter(p => p.status === 'Active').length;
     const delayedProjects = projects.filter(p => p.status === 'Delayed').length;
     const completedProjects = projects.filter(p => p.status === 'Completed').length;
-    
+
     const openIssues = issues.filter(i => ['Reported', 'Assigned', 'In Progress', 'Under Review'].includes(i.status)).length;
     const closedIssues = issues.filter(i => ['Resolved', 'Closed'].includes(i.status)).length;
     const decisionsRecorded = decisions.length;
@@ -885,7 +885,7 @@ router.get('/analytics/dashboard', authenticateJWT, async (req, res) => {
       'Overhaul Division', 'Design Division', 'Quality Assurance', 'Production',
       'Procurement', 'Human Resources', 'Information Technology', 'Finance', 'Research & Development'
     ];
-    
+
     divisionsList.forEach(dept => {
       deptStats[dept] = { decisions: 0, issues: 0, projects: 0 };
     });
