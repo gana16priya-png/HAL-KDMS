@@ -1,0 +1,1 @@
+export const API_URL = "https://hal-kdms-backend.onrender.com/api";

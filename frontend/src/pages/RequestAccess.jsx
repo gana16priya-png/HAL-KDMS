@@ -1,3 +1,4 @@
+import { API_URL } from '../config';
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { Plane, User, Mail, AlertCircle, ArrowLeft, Building2, UserSquare2, Sparkles, MessageCircle } from 'lucide-react';
@@ -27,7 +28,7 @@ export default function RequestAccess() {
     setLoading(true);
 
     try {
-      const res = await fetch('/api/auth/request-access', {
+      const res = await fetch(`${API_URL}/auth/request-access', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, email, department, role, reason })

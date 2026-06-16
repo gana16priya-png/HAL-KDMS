@@ -1,3 +1,4 @@
+import { API_URL } from '../config';
 import React, { useState, useEffect, useContext } from 'react';
 import { AuthContext } from '../App';
 import { ScrollText, Search, ShieldCheck, Clock, Terminal } from 'lucide-react';
@@ -14,8 +15,8 @@ export default function AuditLogs() {
 
   const fetchLogs = async () => {
     try {
-      const res = await fetch('/api/auditlogs', {
-        headers: { 'Authorization': `Bearer ${token}` }
+      const res = await fetch(`${API_URL}/auditlogs', {
+        headers: { 'Authorization': `Bearer ${ token }` }
       });
       if (res.ok) {
         const list = await res.json();

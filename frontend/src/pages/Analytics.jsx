@@ -1,16 +1,17 @@
+import { API_URL } from '../config';
 import React, { useState, useEffect, useContext } from 'react';
 import { AuthContext } from '../App';
 import { Bar, Line, Doughnut } from 'react-chartjs-2';
-import { 
-  BarChart3, 
-  TrendingUp, 
-  ShieldAlert, 
-  Heart, 
-  FolderGit2, 
+import {
+  BarChart3,
+  TrendingUp,
+  ShieldAlert,
+  Heart,
+  FolderGit2,
   FolderCheck,
-  Clock, 
-  AlertOctagon, 
-  CheckCircle2, 
+  Clock,
+  AlertOctagon,
+  CheckCircle2,
   FileCheck,
   BookOpen,
   Zap,
@@ -53,8 +54,8 @@ export default function Analytics() {
 
   const fetchAnalyticsData = async () => {
     try {
-      const res = await fetch('/api/analytics/dashboard', {
-        headers: { 'Authorization': `Bearer ${token}` }
+      const res = await fetch(`${API_URL}/analytics/dashboard', {
+        headers: { 'Authorization': `Bearer ${ token }` }
       });
       if (res.ok) {
         const d = await res.json();
@@ -101,7 +102,7 @@ export default function Analytics() {
     { label: 'Decisions Vaulted', value: cards.decisionsRecorded, sub: 'Persisted memory blocks', icon: FileCheck, color: 'text-indigo-500 bg-indigo-500/10 border-indigo-500/20' },
     { label: 'Open Defects', value: cards.openIssues, sub: 'Active engineering anomalies', icon: AlertOctagon, color: 'text-red-500 bg-red-500/10 border-red-500/20' },
     { label: 'Resolved Defects', value: cards.closedIssues, sub: 'Closed tickets with RCA', icon: CheckCircle2, color: 'text-teal-500 bg-teal-500/10 border-teal-500/20' },
-    { label: 'SLA Resolution', value: `${charts.issueResolutionRate}%`, sub: 'Compliance speed vs 72h limit', icon: Zap, color: 'text-sky-500 bg-sky-500/10 border-sky-500/20' },
+    { label: 'SLA Resolution', value: `${ charts.issueResolutionRate } % `, sub: 'Compliance speed vs 72h limit', icon: Zap, color: 'text-sky-500 bg-sky-500/10 border-sky-500/20' },
     { label: 'Vault Blueprints', value: cards.documentsUploaded, sub: 'Classified CAD documents', icon: BookOpen, color: 'text-purple-500 bg-purple-500/10 border-purple-500/20' }
   ];
 
@@ -173,7 +174,7 @@ export default function Analytics() {
                   <span className="text-[10px] uppercase tracking-wider font-extrabold text-slate-400 dark:text-slate-500 block">{item.label}</span>
                   <span className="text-[9px] text-slate-400 font-light mt-0.5 block">{item.sub}</span>
                 </div>
-                <div className={`p-2.5 rounded-xl ${item.color} border shrink-0`}>
+                <div className={`p - 2.5 rounded - xl ${ item.color } border shrink - 0`}>
                   <Icon className="h-4.5 w-4.5" />
                 </div>
               </div>

@@ -1,11 +1,12 @@
+import { API_URL } from '../config';
 import React, { useState, useEffect, useRef, useContext } from 'react';
 import { AuthContext } from '../App';
-import { 
-  Send, 
-  Sparkles, 
-  Bot, 
-  User, 
-  Cpu, 
+import {
+  Send,
+  Sparkles,
+  Bot,
+  User,
+  Cpu,
   ArrowRight,
   BookOpen,
   FileText,
@@ -71,11 +72,11 @@ You can ask me questions about:
     setMessages(prev => [...prev, { sender: 'user', text: query }]);
 
     try {
-      const res = await fetch('/api/ai/chat', {
+      const res = await fetch(`${API_URL}/ai/chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`
+          'Authorization': `Bearer ${ token }`
         },
         body: JSON.stringify({ query, mode })
       });
@@ -138,10 +139,10 @@ You can ask me questions about:
                 key={m}
                 type="button"
                 onClick={() => setMode(m)}
-                className={`px-3 py-1 text-[10px] font-bold rounded-lg transition-all ${
-                  mode === m 
-                    ? 'bg-white text-sky-550 shadow-sm dark:bg-hal-darkCard dark:text-sky-400' 
-                    : 'text-slate-400 hover:text-slate-655 dark:hover:text-slate-350'
+                className={`px - 3 py - 1 text - [10px] font - bold rounded - lg transition - all ${
+        mode === m
+        ? 'bg-white text-sky-550 shadow-sm dark:bg-hal-darkCard dark:text-sky-400'
+        : 'text-slate-400 hover:text-slate-655 dark:hover:text-slate-350'
                 }`}
               >
                 {m}
@@ -157,23 +158,23 @@ You can ask me questions about:
             return (
               <div 
                 key={idx} 
-                className={`flex gap-4 max-w-3xl ${isAI ? '' : 'ml-auto flex-row-reverse'}`}
+                className={`flex gap - 4 max - w - 3xl ${ isAI ? '' : 'ml-auto flex-row-reverse' } `}
               >
                 {/* Profile Avatar */}
-                <div className={`h-8 w-8 rounded-lg flex items-center justify-center border shrink-0 ${
-                  isAI 
-                    ? 'bg-sky-500/10 border-sky-400/20 text-sky-400' 
-                    : 'bg-slate-100 border-slate-200 text-slate-500 dark:bg-slate-800 dark:border-slate-700'
-                }`}>
+                <div className={`h - 8 w - 8 rounded - lg flex items - center justify - center border shrink - 0 ${
+      isAI
+        ? 'bg-sky-500/10 border-sky-400/20 text-sky-400'
+        : 'bg-slate-100 border-slate-200 text-slate-500 dark:bg-slate-800 dark:border-slate-700'
+    } `}>
                   {isAI ? <Bot className="h-4.5 w-4.5" /> : <User className="h-4.5 w-4.5" />}
                 </div>
 
                 {/* Text Balloon */}
-                <div className={`p-4 rounded-2xl text-xs leading-relaxed border ${
-                  isAI 
-                    ? 'bg-slate-50/50 border-slate-200/50 text-slate-750 dark:bg-slate-900/40 dark:border-slate-800 dark:text-slate-300' 
-                    : 'bg-sky-500 text-slate-950 border-sky-600 font-medium'
-                }`}>
+                <div className={`p - 4 rounded - 2xl text - xs leading - relaxed border ${
+      isAI
+        ? 'bg-slate-50/50 border-slate-200/50 text-slate-750 dark:bg-slate-900/40 dark:border-slate-800 dark:text-slate-300'
+        : 'bg-sky-500 text-slate-950 border-sky-600 font-medium'
+    } `}>
                   <p className="whitespace-pre-wrap select-text">{msg.text}</p>
                 </div>
               </div>
@@ -221,7 +222,7 @@ You can ask me questions about:
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              placeholder={`Ask a question in ${mode} Mode...`}
+              placeholder={`Ask a question in ${ mode } Mode...`}
               className="flex-1 px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:outline-none dark:bg-slate-900/60 dark:border-slate-800 dark:text-white"
             />
             <button

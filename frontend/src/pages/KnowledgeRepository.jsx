@@ -1,11 +1,12 @@
+import { API_URL } from '../config';
 import React, { useState, useEffect, useContext } from 'react';
 import { AuthContext } from '../App';
-import { 
-  Search, 
-  Filter, 
-  FileText, 
-  AlertTriangle, 
-  FolderGit2, 
+import {
+  Search,
+  Filter,
+  FileText,
+  AlertTriangle,
+  FolderGit2,
   FolderLock,
   ChevronRight,
   Plane
@@ -34,10 +35,10 @@ export default function KnowledgeRepository() {
       setLoading(true);
       // Fetch concurrently
       const [decRes, projRes, issRes, docRes] = await Promise.all([
-        fetch('/api/decisions', { headers: { 'Authorization': `Bearer ${token}` } }),
-        fetch('/api/projects', { headers: { 'Authorization': `Bearer ${token}` } }),
-        fetch('/api/issues', { headers: { 'Authorization': `Bearer ${token}` } }),
-        fetch('/api/documents', { headers: { 'Authorization': `Bearer ${token}` } })
+        fetch(`${API_URL}/decisions', { headers: { 'Authorization': `Bearer ${ token }` } }),
+        fetch(`${ API_URL } / projects', { headers: { 'Authorization': `Bearer ${token}` } }),
+        fetch(`${API_URL}/issues', { headers: { 'Authorization': `Bearer ${ token }` } }),
+        fetch(`${ API_URL } / documents', { headers: { 'Authorization': `Bearer ${token}` } })
       ]);
 
       let decisions = decRes.ok ? await decRes.json() : [];
@@ -102,18 +103,18 @@ export default function KnowledgeRepository() {
 
   // Filter combined lists
   const filteredItems = items.filter(item => {
-    const matchesSearch = item.title.toLowerCase().includes(search.toLowerCase()) || 
-                          item.desc.toLowerCase().includes(search.toLowerCase());
-    
+    const matchesSearch = item.title.toLowerCase().includes(search.toLowerCase()) ||
+      item.desc.toLowerCase().includes(search.toLowerCase());
+
     const matchesTab = activeTab === 'All' || item.type === activeTab;
     const matchesDept = selectedDept === 'All' || item.dept === selectedDept || item.dept === 'Aerospace Core';
-    
+
     return matchesSearch && matchesTab && matchesDept;
   });
 
   return (
     <div className="space-y-6 max-w-7xl mx-auto select-none">
-      
+
       {/* Header */}
       <div className="border-b border-slate-200 pb-4 dark:border-slate-800">
         <h2 className="text-xl font-bold tracking-tight text-slate-850 dark:text-white">Knowledge Hub</h2>
@@ -122,7 +123,7 @@ export default function KnowledgeRepository() {
 
       {/* Search and Filters Toolbar */}
       <div className="bg-white border border-slate-200/80 rounded-2xl p-4 dark:bg-hal-darkCard dark:border-hal-darkBorder/40 flex flex-wrap gap-4 items-center">
-        
+
         {/* Search */}
         <div className="relative flex-1 min-w-[280px]">
           <span className="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-400">
@@ -160,11 +161,10 @@ export default function KnowledgeRepository() {
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
-            className={`pb-2.5 font-bold text-xs transition-all relative ${
-              activeTab === tab 
-                ? 'text-sky-400 font-extrabold border-b-2 border-sky-400' 
-                : 'text-slate-450 hover:text-slate-700 dark:hover:text-slate-200'
-            }`}
+            className={`pb-2.5 font-bold text-xs transition-all relative ${activeTab === tab
+              ? 'text-sky-400 font-extrabold border-b-2 border-sky-400'
+              : 'text-slate-450 hover:text-slate-700 dark:hover:text-slate-200'
+              }`}
           >
             {tab === 'All' ? 'All Archive' : `${tab}s`}
           </button>
@@ -185,18 +185,17 @@ export default function KnowledgeRepository() {
               className="bg-white border border-slate-200/80 p-5 rounded-2xl flex items-center justify-between gap-6 cursor-pointer hover:shadow-md transition-all dark:bg-hal-darkCard dark:border-hal-darkBorder/40 glow-card"
             >
               <div className="flex gap-4">
-                
+
                 {/* Icon wrapper based on classification */}
-                <div className={`p-3 rounded-xl border shrink-0 h-11 w-11 flex items-center justify-center ${
-                  item.type === 'Decision' ? 'bg-emerald-500/10 border-emerald-500/20 text-emerald-500' :
+                <div className={`p-3 rounded-xl border shrink-0 h-11 w-11 flex items-center justify-center ${item.type === 'Decision' ? 'bg-emerald-500/10 border-emerald-500/20 text-emerald-500' :
                   item.type === 'Issue' ? 'bg-red-500/10 border-red-500/20 text-red-500' :
-                  item.type === 'Project' ? 'bg-blue-500/10 border-blue-500/20 text-blue-500' :
-                  'bg-sky-500/10 border-sky-500/20 text-sky-500'
-                }`}>
+                    item.type === 'Project' ? 'bg-blue-500/10 border-blue-500/20 text-blue-500' :
+                      'bg-sky-500/10 border-sky-500/20 text-sky-500'
+                  }`}>
                   {item.type === 'Decision' ? <FileText className="h-4.5 w-4.5" /> :
-                   item.type === 'Issue' ? <AlertTriangle className="h-4.5 w-4.5" /> :
-                   item.type === 'Project' ? <FolderGit2 className="h-4.5 w-4.5" /> :
-                   <FolderLock className="h-4.5 w-4.5" />}
+                    item.type === 'Issue' ? <AlertTriangle className="h-4.5 w-4.5" /> :
+                      item.type === 'Project' ? <FolderGit2 className="h-4.5 w-4.5" /> :
+                        <FolderLock className="h-4.5 w-4.5" />}
                 </div>
 
                 <div className="space-y-1">

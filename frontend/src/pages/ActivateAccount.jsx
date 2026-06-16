@@ -1,3 +1,4 @@
+import { API_URL } from '../config';
 import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../App';
@@ -28,11 +29,11 @@ export default function ActivateAccount() {
     setLoading(true);
 
     try {
-      const res = await fetch('/api/auth/activate-account', {
+      const res = await fetch(`${API_URL}/auth/activate-account', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`
+          'Authorization': `Bearer ${ token }`
         },
         body: JSON.stringify({ newPassword: password })
       });
